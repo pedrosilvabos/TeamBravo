@@ -9,12 +9,14 @@ git clone https://github.com/pedrosilvabos/teambravo.git
 
 <b>Available Branches:</b>
 
-  <pre>ana<br/>
-  master<br/>
-  mesquita<br/>
-  pedro<br/>
-  silveira<br/>
-  vasco<br/></pre>
+  <pre>
+    ana<br/>
+    master<br/>
+    mesquita<br/>
+    pedro<br/>
+    silveira<br/>
+    vasco<br/>
+  </pre>
 
 <b>Change branch:</b></br>
 git checkout [your branch]
