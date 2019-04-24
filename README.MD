@@ -9,12 +9,12 @@ git clone https://github.com/pedrosilvabos/teambravo.git
 
 <b>Available Branches:</b>
 
-  <pre>remotes/origin/ana<br/>
-  remotes/origin/master<br/>
-  remotes/origin/mesquita<br/>
-  remotes/origin/pedro<br/>
-  remotes/origin/silveira<br/>
-  remotes/origin/vasco<br/></pre>
+  <pre>ana<br/>
+  master<br/>
+  mesquita<br/>
+  pedro<br/>
+  silveira<br/>
+  vasco<br/></pre>
 
 <b>Change branch:</b></br>
 git checkout [your branch]
