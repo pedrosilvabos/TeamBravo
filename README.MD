@@ -5,16 +5,16 @@
 
 git clone https://github.com/pedrosilvabos/teambravo.git
 
-<pre>(the cloning creates all the connections and there is not more configurations needed)</pre>
+<pre>(the cloning creates all the connections and there is no more configurations needed)</pre>
 
 <b>Available Branches:</b>
 
-  remotes/origin/ana<br/>
+  <pre>remotes/origin/ana<br/>
   remotes/origin/master<br/>
   remotes/origin/mesquita<br/>
   remotes/origin/pedro<br/>
   remotes/origin/silveira<br/>
-  remotes/origin/vasco<br/>
+  remotes/origin/vasco<br/></pre>
 
 <b>Change branch:</b></br>
 git checkout [your branch]
