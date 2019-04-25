@@ -2,24 +2,40 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <thymeleaf th:replace="header :: header" />
+
+    <link rel="stylesheet" href="WEB-INF/templates/css/style.css" type="text/css"/>
+
+    <style>
+
+        body { text-align: center;}
+
+        h1.title { margin-top: 250px;}
+
+        a.btn-primary { width: 300px; border: 3px solid #F28500; margin-bottom: 30px; border-radius:20px; }
+
+        select option { width: 125px;}
+
+    </style>
+
 </head>
 <body>
 <div class="container">
 
     <div th:replace="action :: action"></div>
 
-    <h2>index page</h2>
+    <h1 class="title"> WorkUp </h1>
 
     <form action="/search">
 
-        Skill I am looking for<br>
-        <select>
+        Skill I am looking for <br>
+        <select class="browser-default custom-select">
             <option value="carpenter">Volvo</option>
             <option value="mechanic">Saab</option>
             <option value="plumber">Opel</option>
             <option value="electrician">Audi</option>
         </select>
-        <select>
+
+        <select class="mdb-select md-form">
             <option selected="selected">All</option>
             <option>Angra</option>
             <option>Praia</option>
@@ -29,7 +45,8 @@
         <br><br>
 
     </form>
-    <div class="col-sm-3">
+
+    <div class="">
         <a class="btn btn-primary" th:href="@{/search}">Search</a>
     </div>
 
@@ -72,8 +89,7 @@
 </div>
 
 <div class="text-center">
-    <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalRegisterForm">Launch
-        Modal Register Form</a>
+    <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalRegisterForm">Sign Up</a>
 </div>
 <!-- end register modal -->
 <!-- Login modal -->
@@ -87,7 +103,8 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body mx-3">
+            <div id="register" class="modal-body mx-3">
+
                 <div class="md-form mb-5">
                     <i class="fas fa-envelope prefix grey-text"></i>
                     <input type="email" id="defaultForm-email" class="form-control validate">
@@ -109,8 +126,7 @@
 </div>
 
 <div class="text-center">
-    <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Launch
-        Modal Login Form</a>
+    <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Register</a>
 </div>
 <!--end Login modal -->
 
