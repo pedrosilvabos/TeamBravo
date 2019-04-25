@@ -1,6 +1,6 @@
 package org.academiadecodigo.teambravo.converters;
 
-import org.academiadecodigo.teambravo.dto.UserDto;
+import org.academiadecodigo.teambravo.command.UserDto;
 import org.academiadecodigo.teambravo.persistence.model.User;
 
 public class UserDtoToUser extends AbstractConverter<User, UserDto> {

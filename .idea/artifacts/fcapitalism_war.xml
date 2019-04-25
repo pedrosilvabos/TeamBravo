@@ -1,14 +1,14 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="teambravo:war">
+  <artifact type="war" name="fcapitalism:war">
     <output-path>$PROJECT_DIR$/target</output-path>
     <properties id="maven-jee-properties">
       <options>
-        <module>teambravo</module>
+        <module>fcapitalism</module>
         <packaging>war</packaging>
       </options>
     </properties>
     <root id="archive" name="fcapitalism.war">
-      <element id="artifact" artifact-name="teambravo:war exploded" />
+      <element id="artifact" artifact-name="fcapitalism:war exploded" />
     </root>
   </artifact>
 </component>

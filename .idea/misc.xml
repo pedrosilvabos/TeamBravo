@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-<<<<<<< HEAD
-  <component name="ProjectRootManager">
-=======
-  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$" />
-    <file type="web" url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -16,7 +11,6 @@
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
->>>>>>> 7ac5d9a46eaabcacbd9e25d7b7904e033d428a0d
-    <output url="file://$PROJECT_DIR$/out" />
+    <output url="file://$PROJECT_DIR$/classes" />
   </component>
 </project>
