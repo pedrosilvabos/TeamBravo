@@ -5,14 +5,17 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
 @Entity
-@DiscriminatorColumn(name = "skill_id")
 public class Skill extends AbstractModel {
 
-
+    private Integer Rating;
     private String name;
 
     @ManyToOne
     private User user;
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;
@@ -28,7 +31,11 @@ public class Skill extends AbstractModel {
         this.user = user;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public Integer getRating() {
+        return Rating;
+    }
+
+    public void setRating(Integer rating) {
+        Rating = rating;
     }
 }

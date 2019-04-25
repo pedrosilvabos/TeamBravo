@@ -36,6 +36,7 @@ public class User extends AbstractModel {
         return userSkills;
     }
 
+
     public void setUserSkills(Map<Skill, Integer> userSkills) {
         this.userSkills = userSkills;
     }
@@ -118,6 +119,9 @@ public class User extends AbstractModel {
     }
 
 
+
+
+    //rating? - 
 
 
 }
