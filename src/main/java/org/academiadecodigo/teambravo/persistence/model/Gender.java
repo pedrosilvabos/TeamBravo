@@ -8,8 +8,11 @@ public enum Gender {
 
     private String gender;
 
-     Gender(){
-      this.gender =
+     Gender(String gender){
+      this.gender = gender;
     }
 
+    public String getGender() {
+        return gender;
+    }
 }

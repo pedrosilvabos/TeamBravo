@@ -1,8 +1,8 @@
 package org.academiadecodigo.teambravo.persistence.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
 
 
@@ -20,6 +20,7 @@ public class User extends AbstractModel {
 
     private Integer citizenNumber;
 
+    @OneToOne
     private Location location;
 
     private Date dateOfBirth;
@@ -28,7 +29,8 @@ public class User extends AbstractModel {
 
     private Integer creditHours;
 
-    private Map<Skill, Integer> userSkills;
+    @OneToMany(cascade = {CascadeType.ALL}, orphanRemoval = true, mappedBy = "users", fetch = FetchType.EAGER)
+    private Map<Skill, Integer> userSkills = new HashMap<>();
 
     public Map<Skill, Integer> getUserSkills() {
         return userSkills;
@@ -108,6 +110,11 @@ public class User extends AbstractModel {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public void addSkill(Skill skill, Integer rating){
+       skill.setUser(this);
+       userSkills.put(skill, rating);
     }
 
 
