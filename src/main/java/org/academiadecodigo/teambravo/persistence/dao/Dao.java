@@ -7,7 +7,7 @@ import java.util.List;
 public interface Dao<T extends Model> {
 
     List<T> findAll();
-    T findById();
+    T findById(Integer id);
     T saveOrUpdate(T modelObject);
     void delete(Integer id);
 

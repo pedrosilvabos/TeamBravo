@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 org/academiadecodigo/teambravo/controller/ProfileController.class
+=======
+org/academiadecodigo/teambravo/persistence/dao/jpa/JpaSkillDaoImpl.class
+>>>>>>> origin/silveira
 org/academiadecodigo/teambravo/services/UserServiceImpl.class
-org/academiadecodigo/teambravo/persistence/dao/jpa/JpaUserDao.class
-org/academiadecodigo/teambravo/dto/UserDto.class
+org/academiadecodigo/teambravo/persistence/dao/SkillDao.class
 org/academiadecodigo/teambravo/persistence/dao/Dao.class
+<<<<<<< HEAD
 org/academiadecodigo/teambravo/converters/AbstractConverter.class
+=======
+org/academiadecodigo/teambravo/persistence/model/Skill.class
+org/academiadecodigo/teambravo/converters/AbstractConverter.class
+org/academiadecodigo/teambravo/persistence/dao/jpa/JpaUserDaoImpl.class
+>>>>>>> origin/silveira
 org/academiadecodigo/teambravo/SpringBootstrap.class
 org/academiadecodigo/teambravo/persistence/model/AbstractModel.class
 org/academiadecodigo/teambravo/persistence/model/User.class
@@ -11,9 +20,18 @@ org/academiadecodigo/teambravo/persistence/model/Model.class
 org/academiadecodigo/teambravo/persistence/dao/jpa/GenericDao.class
 org/academiadecodigo/teambravo/persistence/dao/UserDao.class
 org/academiadecodigo/teambravo/controller/MainController.class
+<<<<<<< HEAD
 org/academiadecodigo/teambravo/converters/UserToUserDto.class
 org/academiadecodigo/teambravo/command/UserDto.class
 org/academiadecodigo/teambravo/services/UserService.class
 org/academiadecodigo/teambravo/controller/RegisterController.class
 org/academiadecodigo/teambravo/controller/SearchController.class
+=======
+org/academiadecodigo/teambravo/controller/UserController.class
+org/academiadecodigo/teambravo/persistence/model/Gender.class
+org/academiadecodigo/teambravo/persistence/model/Location.class
+org/academiadecodigo/teambravo/converters/UserToUserDto.class
+org/academiadecodigo/teambravo/command/UserDto.class
+org/academiadecodigo/teambravo/services/UserService.class
+>>>>>>> origin/silveira
 org/academiadecodigo/teambravo/converters/UserDtoToUser.class
