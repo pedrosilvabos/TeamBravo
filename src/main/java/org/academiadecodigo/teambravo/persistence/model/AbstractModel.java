@@ -3,14 +3,11 @@ package org.academiadecodigo.teambravo.persistence.model;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Version;
+import javax.persistence.*;
 import java.util.Date;
 
+@MappedSuperclass
 public abstract class AbstractModel implements Model {
-
 
 
     @Id
@@ -25,10 +22,6 @@ public abstract class AbstractModel implements Model {
 
     @UpdateTimestamp
     private Date updateTime;
-
-
-
-
 
     @Override
     public Integer getId() {
@@ -56,6 +49,7 @@ public abstract class AbstractModel implements Model {
         this.creationTime = creationTime;
     }
 
+
     public Date getUpdateTime() {
         return updateTime;
     }
@@ -63,4 +57,15 @@ public abstract class AbstractModel implements Model {
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
+
+    @Override
+    public String toString() {
+        return "AbstractModel{" +
+                "id=" + id +
+                ", version=" + version +
+                ", creationTime=" + creationTime +
+                ", updateTime=" + updateTime +
+                '}';
+    }
+
 }

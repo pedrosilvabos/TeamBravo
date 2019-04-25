@@ -32,8 +32,13 @@ public class User extends AbstractModel {
 
     private Integer creditHours;
 
-    @OneToMany(cascade = {CascadeType.ALL}, orphanRemoval = true, mappedBy = "users", fetch = FetchType.EAGER)
+    @ElementCollection
+    @CollectionTable(name = "users_skills")
+    @MapKeyColumn(name = "skill_name")
+    @JoinColumn(name = "user_id")
     private Map<Skill, Integer> userSkills = new HashMap<>();
+
+
 
     public Map<Skill, Integer> getUserSkills() {
         return userSkills;
@@ -117,7 +122,7 @@ public class User extends AbstractModel {
     }
 
     public void addSkill(Skill skill, Integer rating) {
-        skill.setUser(this);
+        skill.addUser(this);
         userSkills.put(skill, rating);
     }
 
@@ -140,6 +145,23 @@ public class User extends AbstractModel {
 
         this.rating = sum / count;
 
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", citizenNumber=" + citizenNumber +
+                ", rating=" + rating +
+                ", location=" + location +
+                ", dateOfBirth=" + dateOfBirth +
+                ", gender=" + gender +
+                ", creditHours=" + creditHours +
+                ", userSkills=" + userSkills +
+                '}';
     }
 }
 

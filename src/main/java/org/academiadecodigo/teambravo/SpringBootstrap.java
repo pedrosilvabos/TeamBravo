@@ -18,7 +18,7 @@ public class SpringBootstrap implements ApplicationListener<ContextRefreshedEven
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
 
-        System.getProperties().setProperty("spring.profiles.active", "dev");
+        System.getProperties().setProperty("spring.profiles.active", "prod");
 
         String[] profiles = event.getApplicationContext().getEnvironment().getActiveProfiles();
 
