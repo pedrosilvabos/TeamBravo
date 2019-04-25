@@ -28,5 +28,15 @@ git branch -a </br>
 git add .</br>
 git commit -m "your message"
 
+<b><h1>git master control:</h1></b>
+ <b> merge master into a branch: </b></br>
+  git merge origin/master </br>
+  
+<b>Delete a branch on your local filesystem :</b></br>
+git branch -d [name_of_your_new_branch]
 
+<b>To force the deletion of local branch on your filesystem :</b></br>
+git branch -D [name_of_your_new_branch]
 
+<b>Delete the branch on github :</b></br>
+git push origin :[name_of_your_new_branch]
