@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="ExternalSystem" externalSystem="Maven" />
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Persistence" removed="false">
+          <file>file://$MODULE_DIR$/src/main/webapp/spring/persistence/persistence.xml</file>
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/spring/spring-config.xml</file>
+        </fileset>
+        <fileset id="fileset2" name="Presentation" removed="false">
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/spring/presentation.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
+</module>
