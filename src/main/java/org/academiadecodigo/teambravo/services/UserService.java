@@ -21,6 +21,8 @@ public interface UserService {
 
     Map getSkills(Integer id);
 
+    Integer getUserRating(Integer id);
+
 
 
 

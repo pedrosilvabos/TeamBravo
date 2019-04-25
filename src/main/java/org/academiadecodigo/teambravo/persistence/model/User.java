@@ -1,6 +1,7 @@
 package org.academiadecodigo.teambravo.persistence.model;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -19,6 +20,8 @@ public class User extends AbstractModel {
     private String phone;
 
     private Integer citizenNumber;
+
+    private Integer rating;
 
     @OneToOne
     private Location location;
@@ -113,15 +116,30 @@ public class User extends AbstractModel {
         this.lastName = lastName;
     }
 
-    public void addSkill(Skill skill, Integer rating){
-       skill.setUser(this);
-       userSkills.put(skill, rating);
+    public void addSkill(Skill skill, Integer rating) {
+        skill.setUser(this);
+        userSkills.put(skill, rating);
     }
 
 
+    public Integer getRating() {
+        return rating;
+    }
 
+    public void setRating(Integer rating) {
 
-    //rating? - 
+        Collection<Integer> list = userSkills.values();
 
+        int sum = 0;
+        int count = 0;
+        for (Integer inte : list
+        ) {
+            count++;
+            sum += inte;
+        }
 
+        this.rating = sum / count;
+
+    }
 }
+

@@ -3,7 +3,8 @@ package org.academiadecodigo.teambravo.persistence.model;
 public enum Gender {
 
     MALE ("male"),
-    FEMALE ("female");
+    FEMALE ("female"),
+    OTHER ("other");
 
 
     private String gender;

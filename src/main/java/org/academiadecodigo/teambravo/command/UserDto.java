@@ -1,10 +1,14 @@
 package org.academiadecodigo.teambravo.command;
 
+import org.academiadecodigo.teambravo.persistence.model.Gender;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.validation.constraints.*;
+import java.util.Date;
 
 public class UserDto {
 
-    private Integer customerId;
+    private Integer userId;
 
     @NotNull(message = "Please insert your first name")
     @NotBlank(message = "Please insert your first name")
@@ -28,13 +32,30 @@ public class UserDto {
     @Size(min = 9, max = 16)
     private String phone;
 
+    @NotNull(message = "Please insert your citizen number")
+    @NotBlank(message = "Please insert your citizen number")
+    @Size(min = 1, max = 10)
+    private Integer citizenNumber;
+
+
+    @NotNull(message = "Please insert your birth date")
+    @NotBlank(message = "Please insert your birth date")
+    @Size(min = 1, max = 10)
+    private Date dateOfBirth;
+
+
+    @NotNull(message = "Please insert your gender")
+    @NotBlank(message = "Please insert your gender")
+    @Size(min = 1, max = 10)
+    private Gender gender;
+
 
     public Integer getCustomerId() {
-        return customerId;
+        return userId;
     }
 
     public void setCustomerId(Integer customerId) {
-        this.customerId = customerId;
+        this.userId = customerId;
     }
 
     public String getFirstName() {
@@ -73,7 +94,7 @@ public class UserDto {
     @Override
     public String toString() {
         return "UserDto{" +
-                "customerId=" + customerId +
+                "customerId=" + userId +
                 ", firstName=" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
