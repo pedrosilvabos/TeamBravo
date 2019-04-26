@@ -1,31 +1,12 @@
-<<<<<<< HEAD
-/Users/codecadet/teambravo/src/main/java/org/academiadecodigo/teambravo/controller/ProfileController.java
-/Users/codecadet/teambravo/src/main/java/org/academiadecodigo/teambravo/persistence/dao/Dao.java
-/Users/codecadet/teambravo/src/main/java/org/academiadecodigo/teambravo/persistence/dao/UserDao.java
-/Users/codecadet/teambravo/src/main/java/org/academiadecodigo/teambravo/services/UserService.java
-/Users/codecadet/teambravo/src/main/java/org/academiadecodigo/teambravo/controller/SearchController.java
-/Users/codecadet/teambravo/src/main/java/org/academiadecodigo/teambravo/persistence/model/AbstractModel.java
-/Users/codecadet/teambravo/src/main/java/org/academiadecodigo/teambravo/SpringBootstrap.java
-/Users/codecadet/teambravo/src/main/java/org/academiadecodigo/teambravo/converters/UserToUserDto.java
-/Users/codecadet/teambravo/src/main/java/org/academiadecodigo/teambravo/command/UserDto.java
-/Users/codecadet/teambravo/src/main/java/org/academiadecodigo/teambravo/persistence/dao/jpa/JpaUserDao.java
-/Users/codecadet/teambravo/src/main/java/org/academiadecodigo/teambravo/controller/MainController.java
-/Users/codecadet/teambravo/src/main/java/org/academiadecodigo/teambravo/converters/UserDtoToUser.java
-/Users/codecadet/teambravo/src/main/java/org/academiadecodigo/teambravo/persistence/dao/jpa/GenericDao.java
-/Users/codecadet/teambravo/src/main/java/org/academiadecodigo/teambravo/services/UserServiceImpl.java
-/Users/codecadet/teambravo/src/main/java/org/academiadecodigo/teambravo/controller/RegisterController.java
-/Users/codecadet/teambravo/src/main/java/org/academiadecodigo/teambravo/converters/AbstractConverter.java
-/Users/codecadet/teambravo/src/main/java/org/academiadecodigo/teambravo/persistence/model/User.java
-/Users/codecadet/teambravo/src/main/java/org/academiadecodigo/teambravo/dto/UserDto.java
-/Users/codecadet/teambravo/src/main/java/org/academiadecodigo/teambravo/persistence/model/Model.java
-=======
 /Users/codecadet/bravo/teambravo/src/main/java/org/academiadecodigo/teambravo/persistence/dao/UserDao.java
 /Users/codecadet/bravo/teambravo/src/main/java/org/academiadecodigo/teambravo/persistence/model/User.java
 /Users/codecadet/bravo/teambravo/src/main/java/org/academiadecodigo/teambravo/converters/UserToUserDto.java
 /Users/codecadet/bravo/teambravo/src/main/java/org/academiadecodigo/teambravo/controller/MainController.java
+/Users/codecadet/bravo/teambravo/src/main/java/org/academiadecodigo/teambravo/controller/SearchController.java
 /Users/codecadet/bravo/teambravo/src/main/java/org/academiadecodigo/teambravo/command/UserDto.java
 /Users/codecadet/bravo/teambravo/src/main/java/org/academiadecodigo/teambravo/persistence/dao/Dao.java
 /Users/codecadet/bravo/teambravo/src/main/java/org/academiadecodigo/teambravo/persistence/model/Model.java
+/Users/codecadet/bravo/teambravo/src/main/java/org/academiadecodigo/teambravo/controller/ProfileController.java
 /Users/codecadet/bravo/teambravo/src/main/java/org/academiadecodigo/teambravo/persistence/model/Location.java
 /Users/codecadet/bravo/teambravo/src/main/java/org/academiadecodigo/teambravo/converters/UserDtoToUser.java
 /Users/codecadet/bravo/teambravo/src/main/java/org/academiadecodigo/teambravo/persistence/model/Gender.java
@@ -38,6 +19,6 @@
 /Users/codecadet/bravo/teambravo/src/main/java/org/academiadecodigo/teambravo/persistence/dao/SkillDao.java
 /Users/codecadet/bravo/teambravo/src/main/java/org/academiadecodigo/teambravo/services/UserService.java
 /Users/codecadet/bravo/teambravo/src/main/java/org/academiadecodigo/teambravo/SpringBootstrap.java
+/Users/codecadet/bravo/teambravo/src/main/java/org/academiadecodigo/teambravo/controller/RegisterController.java
 /Users/codecadet/bravo/teambravo/src/main/java/org/academiadecodigo/teambravo/persistence/model/AbstractModel.java
 /Users/codecadet/bravo/teambravo/src/main/java/org/academiadecodigo/teambravo/persistence/model/Skill.java
->>>>>>> origin/silveira

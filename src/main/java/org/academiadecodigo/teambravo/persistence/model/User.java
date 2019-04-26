@@ -40,7 +40,7 @@ public class User extends AbstractModel {
 
 
 
-    public Map<Skill, Integer> getUserSkills() {
+    public List<Skill> getUserSkills() {
         return userSkills;
     }
 

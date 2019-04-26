@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Map;
 @Service
 public class UserServiceImpl implements UserService {
@@ -88,7 +89,7 @@ public class UserServiceImpl implements UserService {
 
     @Transactional(readOnly = true)
     @Override
-    public Map getSkills(Integer id) {
+    public List getSkills(Integer id) {
         return userDao.findById(id).getUserSkills();
     }
 
