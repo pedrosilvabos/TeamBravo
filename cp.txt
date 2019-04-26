@@ -1,0 +1,3 @@
+9500-000,"Ponta Delgada"
+9700-000,"Angra do Heroísmo"
+9760-000,"Praia da Vitória"
