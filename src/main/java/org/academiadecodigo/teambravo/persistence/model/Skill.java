@@ -34,5 +34,10 @@ public class Skill extends AbstractModel {
         this.users.add(user);
     }
 
-
+    @Override
+    public String toString() {
+        return "Skill{" +
+                "skillName='" + skillName + '\'' +
+                '}';
+    }
 }

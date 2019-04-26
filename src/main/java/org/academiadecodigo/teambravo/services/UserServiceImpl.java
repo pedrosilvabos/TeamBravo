@@ -90,10 +90,18 @@ public class UserServiceImpl implements UserService {
 
     @Transactional(readOnly = true)
     @Override
-    public List<Skill> getSkills(Integer id) {
+    public List<Skill> getUserSkills(Integer id) {
         return userDao.findById(id).getSkills();
     }
 
+    @Transactional
+    @Override
+    public List<Skill> getAllSkills() {
+        return skillDao.findAll();
+    }
+
+
+    @Transactional
     @Override
     public Integer getUserRating(Integer id) {
         return userDao.findById(id).getRating();

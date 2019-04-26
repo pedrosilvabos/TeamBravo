@@ -20,7 +20,9 @@ public interface UserService {
 
     User getUserById(Integer id);
 
-    List getSkills(Integer id);
+    List getUserSkills(Integer id);
+
+    List<Skill> getAllSkills();
 
     Integer getUserRating(Integer id);
 

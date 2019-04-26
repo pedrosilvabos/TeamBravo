@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <thymeleaf th:replace="header :: header" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 </head>
 <body>
 <div class="container">
@@ -13,11 +14,12 @@
     <form action="/search">
 
         Skill I am looking for<br>
+        <form>
+
         <select>
-            <option value="carpenter">Volvo</option>
-            <option value="mechanic">Saab</option>
-            <option value="plumber">Opel</option>
-            <option value="electrician">Audi</option>
+            <option th:each="allskill : ${allSkills}" th:th:text="${allskill.name}"></option>
+
+
         </select>
         <select>
             <option selected="selected">All</option>
@@ -26,6 +28,7 @@
             <option>Açores</option>
             <option>Portugal</option>
         </select>
+        </form>
         <br><br>
 
     </form>
