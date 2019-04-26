@@ -1,16 +1,14 @@
 package org.academiadecodigo.teambravo.persistence.model;
 
 import javax.persistence.*;
+import java.util.LinkedList;
 import java.util.List;
 
-@Entity
-@Table(name = "skills")
 public class Skill extends AbstractModel {
 
     private String skillName;
 
-    @ManyToMany(mappedBy = "skills", fetch = FetchType.LAZY)
-    private List<User> users;
+    private List<User> users = new LinkedList<>();
 
     public void setName(String name) {
         this.skillName = name;
@@ -26,8 +24,8 @@ public class Skill extends AbstractModel {
         return users;
     }
 
-    public void setUser(List<User> user) {
-        this.users = user;
+    public void setUser(User user) {
+        users.add(user);
     }
 
     public void addUser(User user){

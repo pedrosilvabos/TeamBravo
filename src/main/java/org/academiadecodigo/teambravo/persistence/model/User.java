@@ -6,8 +6,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 
-@Entity
-@Table(name = "users")
 public class User extends AbstractModel {
 
     private String firstName;
@@ -22,7 +20,6 @@ public class User extends AbstractModel {
 
     private Integer rating;
 
-    @OneToOne
     private Location location;
 
     private Date dateOfBirth;
@@ -31,8 +28,11 @@ public class User extends AbstractModel {
 
     private Integer creditHours;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+
+
     private List<Skill> skills = new LinkedList<>();
+
+
 
 
     public List<Skill> getSkills() {
@@ -131,6 +131,8 @@ public class User extends AbstractModel {
         this.rating = rating;
 
     }
+
+
 
     @Override
     public String toString() {

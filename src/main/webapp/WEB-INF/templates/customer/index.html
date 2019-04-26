@@ -11,30 +11,27 @@
 
     <h2>index page</h2>
 
-    <form action="/search">
+    <form th:action="@{/search}" method="get">
 
         Skill I am looking for<br>
-        <form>
 
-        <select>
+
+        <select name="skills">
             <option th:each="allskill : ${allSkills}" th:th:text="${allskill.name}"></option>
 
 
         </select>
-        <select>
-            <option selected="selected">All</option>
-            <option>Angra</option>
-            <option>Praia</option>
-            <option>Açores</option>
-            <option>Portugal</option>
+        <select name="location">
+            <option th:each="allLocation : ${allLocations}" th:th:text="${allLocation.name}"></option>
         </select>
-        </form>
-        <br><br>
+
+        <div class="col-sm-3">
+            <input type="submit" class="btn btn-primary" >Search</input>
+        </div>
+
 
     </form>
-    <div class="col-sm-3">
-        <a class="btn btn-primary" th:href="@{/search}">Search</a>
-    </div>
+
 
 </div>
 <!-- register modal -->
@@ -68,7 +65,8 @@
 
             </div>
             <div class="modal-footer d-flex justify-content-center">
-                <button class="btn btn-deep-orange">Sign up</button>
+                <button class="btn btn-deep-orange" href="@{/submit}" Sign up</button>
+
             </div>
         </div>
     </div>

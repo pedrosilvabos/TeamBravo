@@ -1,23 +1,29 @@
 package org.academiadecodigo.teambravo.persistence.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
-@Entity
-public class Location extends AbstractModel{
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import java.util.LinkedList;
+import java.util.List;
 
-private String name;
+public class Location extends AbstractModel {
 
-@OneToOne
-private User user;
+    private String name;
 
-    public User getUser() {
-        return user;
+    private List<User> users = new LinkedList<>();
+
+    public List<User> getUsers() {
+        return users;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+
+    public void addUser(User user) {
+
+        this.users.add(user);
+        user.setLocation(this);
     }
+
 
     public String getName() {
         return name;
@@ -26,7 +32,6 @@ private User user;
     public void setName(String name) {
         this.name = name;
     }
-
 
 
 }

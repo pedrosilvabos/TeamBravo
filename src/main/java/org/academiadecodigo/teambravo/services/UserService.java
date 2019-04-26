@@ -1,11 +1,10 @@
 package org.academiadecodigo.teambravo.services;
 
+import org.academiadecodigo.teambravo.persistence.model.Location;
 import org.academiadecodigo.teambravo.persistence.model.Skill;
 import org.academiadecodigo.teambravo.persistence.model.User;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
-import java.util.Map;
 
 public interface UserService {
 
@@ -16,7 +15,7 @@ public interface UserService {
 
     void deleteSkill(Integer id, Integer skId);
 
-    void addSkill(Integer id,Integer skId );
+    void addSkill(Integer id, Integer skId);
 
     User getUserById(Integer id);
 
@@ -26,10 +25,11 @@ public interface UserService {
 
     Integer getUserRating(Integer id);
 
+    List<Location> getAllLocations();
 
+    List<User> getUsersBySkill(Skill skill);
 
-
-
+    Skill getSkillById(Integer id);
 
 
 }
