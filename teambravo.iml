@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<module version="4">
+  <component name="ExternalSystem" externalSystem="Maven" />
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Persistence" removed="false">
+          <file>file://$MODULE_DIR$/src/main/webapp/spring/persistence/persistence.xml</file>
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/spring/spring-config.xml</file>
+        </fileset>
+        <fileset id="fileset2" name="Presentation" removed="false">
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/spring/presentation.xml</file>
+        </fileset>
+=======
 <module type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="web" name="Web">
@@ -13,6 +27,7 @@
           <root url="file://$MODULE_DIR$/src/main/java" />
           <root url="file://$MODULE_DIR$/src/main/resources" />
         </sourceRoots>
+>>>>>>> 7ac5d9a46eaabcacbd9e25d7b7904e033d428a0d
       </configuration>
     </facet>
   </component>
