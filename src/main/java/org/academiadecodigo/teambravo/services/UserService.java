@@ -4,6 +4,7 @@ import org.academiadecodigo.teambravo.persistence.model.Skill;
 import org.academiadecodigo.teambravo.persistence.model.User;
 
 import javax.persistence.criteria.CriteriaBuilder;
+import java.util.List;
 import java.util.Map;
 
 public interface UserService {
@@ -19,7 +20,7 @@ public interface UserService {
 
     User getUserById(Integer id);
 
-    Map getSkills(Integer id);
+    List getSkills(Integer id);
 
     Integer getUserRating(Integer id);
 

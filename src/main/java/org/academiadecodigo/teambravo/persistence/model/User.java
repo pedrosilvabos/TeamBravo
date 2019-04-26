@@ -1,14 +1,13 @@
 package org.academiadecodigo.teambravo.persistence.model;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.LinkedList;
+import java.util.List;
 
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User extends AbstractModel {
 
     private String firstName;
@@ -32,21 +31,17 @@ public class User extends AbstractModel {
 
     private Integer creditHours;
 
-    @ElementCollection
-    @CollectionTable(name = "users_skills")
-    @MapKeyColumn(name = "skill_name")
-    @JoinColumn(name = "user_id")
-    private Map<Skill, Integer> userSkills = new HashMap<>();
+    @ManyToMany(fetch = FetchType.EAGER)
+    private List<Skill> skills = new LinkedList<>();
 
 
-
-    public Map<Skill, Integer> getUserSkills() {
-        return userSkills;
+    public List<Skill> getSkills() {
+        return skills;
     }
 
 
-    public void setUserSkills(Map<Skill, Integer> userSkills) {
-        this.userSkills = userSkills;
+    public void setSkills(List<Skill> skills) {
+        this.skills = skills;
     }
 
     public Integer getCitizenNumber() {
@@ -123,7 +118,7 @@ public class User extends AbstractModel {
 
     public void addSkill(Skill skill, Integer rating) {
         skill.addUser(this);
-        userSkills.put(skill, rating);
+        skills.add(skill);
     }
 
 
@@ -133,17 +128,7 @@ public class User extends AbstractModel {
 
     public void setRating(Integer rating) {
 
-        Collection<Integer> list = userSkills.values();
-
-        int sum = 0;
-        int count = 0;
-        for (Integer inte : list
-        ) {
-            count++;
-            sum += inte;
-        }
-
-        this.rating = sum / count;
+        this.rating = rating;
 
     }
 
@@ -160,7 +145,7 @@ public class User extends AbstractModel {
                 ", dateOfBirth=" + dateOfBirth +
                 ", gender=" + gender +
                 ", creditHours=" + creditHours +
-                ", userSkills=" + userSkills +
+                ", skills=" + skills +
                 '}';
     }
 }

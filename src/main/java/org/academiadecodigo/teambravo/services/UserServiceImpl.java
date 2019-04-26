@@ -2,11 +2,13 @@ package org.academiadecodigo.teambravo.services;
 
 import org.academiadecodigo.teambravo.persistence.dao.SkillDao;
 import org.academiadecodigo.teambravo.persistence.dao.UserDao;
+import org.academiadecodigo.teambravo.persistence.model.Skill;
 import org.academiadecodigo.teambravo.persistence.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Map;
 @Service
 public class UserServiceImpl implements UserService {
@@ -88,8 +90,8 @@ public class UserServiceImpl implements UserService {
 
     @Transactional(readOnly = true)
     @Override
-    public Map getSkills(Integer id) {
-        return userDao.findById(id).getUserSkills();
+    public List<Skill> getSkills(Integer id) {
+        return userDao.findById(id).getSkills();
     }
 
     @Override

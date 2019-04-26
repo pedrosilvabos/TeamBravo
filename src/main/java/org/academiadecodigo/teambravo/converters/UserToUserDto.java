@@ -19,7 +19,7 @@ public class UserToUserDto extends AbstractConverter<User, UserDto> {
         userDto.setGender(user.getGender());
         userDto.setLocation(user.getLocation());
         userDto.setPhone(user.getPhone());
-        userDto.setUserSkills(user.getUserSkills());
+        userDto.setUserSkills(user.getSkills());
         userDto.setRating(user.getRating());
 
         return userDto;

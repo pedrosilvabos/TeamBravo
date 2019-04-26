@@ -1,26 +1,23 @@
 package org.academiadecodigo.teambravo.persistence.model;
 
-import javax.persistence.DiscriminatorColumn;
-import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Table(name = "skills")
 public class Skill extends AbstractModel {
 
-    private Integer Rating;
-    private String name;
+    private String skillName;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "skills", fetch = FetchType.LAZY)
     private List<User> users;
 
     public void setName(String name) {
-        this.name = name;
+        this.skillName = name;
     }
 
     public String getName() {
-        return name;
+        return skillName;
     }
 
 
@@ -37,11 +34,5 @@ public class Skill extends AbstractModel {
         this.users.add(user);
     }
 
-    public Integer getRating() {
-        return Rating;
-    }
 
-    public void setRating(Integer rating) {
-        Rating = rating;
-    }
 }

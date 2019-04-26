@@ -6,9 +6,7 @@ import org.academiadecodigo.teambravo.persistence.model.Skill;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.*;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class UserDto {
 
@@ -62,18 +60,18 @@ public class UserDto {
     private Integer rating;
 
 
-    private Map<Skill, Integer> userSkills = new HashMap<>();
+    private List<Skill> userSkills = new LinkedList<>();
 
 
     public Integer getCreditHours() {
         return creditHours;
     }
 
-    public Map<Skill, Integer> getUserSkills() {
+    public List<Skill> getUserSkills() {
         return userSkills;
     }
 
-    public void setUserSkills(Map<Skill, Integer> userSkills) {
+    public void setUserSkills(List<Skill> userSkills) {
         this.userSkills = userSkills;
     }
 
